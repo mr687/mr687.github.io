@@ -1,0 +1,123 @@
+:root {
+	--light-color: #fff;
+	--dark-color: #000;
+	--light-tf-color: rgba(255, 255, 255, .1);
+	--dark-tf-color: rgba(0, 0, 0, .1);
+
+	--font-size: 1.2em;
+	--font-family: "Poppins", sans-serif;
+
+	--primary-text-color: var(--dark-color);
+	--secondary-text-color: var(--dark-color);
+	
+	--body-bg-color: var(--light-color);
+	--nav-hover-bg-color: var(--light-tf-color);
+
+	--rounded-corners: .25em;
+	--circle-corners: 50%;
+
+	--margin-size: .5em;
+	--image-size: 130px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all .03s ease-in;
+}
+
+body {
+	color: var(--primary-text-color);
+	background-color: var(--body-bg-color);
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	height: 100%;
+	width: 100%;
+}
+
+body.night {
+	--primary-text-color: var(--light-color);
+	--secondary-text-color: var(--light-color);
+	--body-bg-color: var(--dark-color);
+	--nav-hover-bg-color: var(--light-tf-color);
+}
+
+body.day {
+	--primary-text-color: var(--dark-color);
+	--secondary-text-color: var(--dark-color);
+	--body-bg-color: var(--light-color);
+	--nav-hover-bg-color: var(--dark-tf-color);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.title,
+.subtitle {
+	margin-bottom: var(--margin-size);
+}
+
+.description {
+	color: var(--secondary-text-color);
+	opacity: .56;
+}
+
+.circle--image-background {
+	width: var(--image-size);
+	height: var(--image-size);
+	border-radius: var(--circle-corners);
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main {
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.navigation {
+	margin: 1.8rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation a {
+	display: block;
+	padding: .5em 1em;
+}
+
+.navigation a:hover {
+	background-color: var(--nav-hover-bg-color);
+	border-radius: var(--rounded-corners);
+}
+
+.navigation--left {
+	margin-left: -20px;
+}
+
+.navigation--left > li,
+.navigation--right > li {
+	display: inline-block;
+}
+
+.content {
+	padding: 1.5rem 0;
+}
+
+section#intro {
+	display: flex;
+	justify-content: space-between;
+}
