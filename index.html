@@ -1,46 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>daphino. - Software Engineer</title>
+	
+	<!-- Meta -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mr687 - Davi Nomoeh Dani - Software Engineer</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-	<link rel="stylesheet" href="./assets/index.css">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+	<!-- Styles -->
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	<link rel="stylesheet" href="/assets/index.css">
 </head>
 <body>
-	<main class="main">
-		<div class="navigation">
-			<ul class="navigation--left">
-				<li><a href="">home.</a></li>
-				<li><a href="">about.</a></li>
-				<li><a href="">snippets.</a></li>
-			</ul>
-			<ul class="navigation--right">
-				<li><a href="javascript:void(0)" id="theme-toggle">dark.</a></li>
-			</ul>
-		</div>
 
-		<div class="content">
-			<section id="intro">
-				<div>
-					<h2 id="profile-name" class="title">[profile.name]</h2>
-					<p id="profile-role" class="subtitle">[profile.role]</p>
-					<p id="profile-description" class="description">
-						[profile.description]
-					</p>
+	<div id="app" class="loading">
+		<div class="loader"></div>
+
+		<header id="header">
+			<div class="logo">
+				<a href="/">
+					<img src="/assets/images/logo-white.png" alt="logo">
+				</a>
+			</div>
+			<div class="menu">
+				<div class="toggle" onclick="openSidebar()">
+					<i class="iconify" data-icon="ci:menu-alt-05" data-width="3em"></i>
 				</div>
+			</div>
+			<nav class="navigation">
+				<div class="close" onclick="closeSidebar()">
+					<i class="iconify" data-icon="ep:close-bold" data-width="3em"></i>
+				</div>
+				<ul>
+					<li><a href="#about-me">About me</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#project">Project</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a class="link button" onclick="goto('resume')" style="margin: 0;">Resume</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main">
+			<section id="introduction">
+				<h1>Davi Nomoeh Dani.</h1>
+				<h1>Helping developers build a web.</h1>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis rem est facilis cupiditate. Ex dolorem perspiciatis voluptates quas voluptate, qui quia nesciunt deleniti. Molestiae reprehenderit dolores saepe. In, nam sit?</p>
 				<div>
-					<div id="profile-pic" class="circle--image-background" style="background-image: url('./assets/images/mr687-pic.webp');"></div>
+					<a class="link button" onclick="goto('github-mr687')">Check out my github!</a>
+					<a class="link button" onclick="goto('resume')">Download resume</a>
 				</div>
 			</section>
-		</div>
-	</main>
+			<section id="about-me">
+				<h1 class="section-title">About me</h1>
+				<div class="detail">
+					<div class="description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vero repellat fugiat molestiae recusandae, illum enim culpa accusamus blanditiis exercitationem consectetur labore, possimus fugit? Labore natus sunt numquam iusto. Reprehenderit.</p>
+						<p>Here are a few technologies I've been working with recently:</p>
+						<div>
+							<ul>
+								<li>Javascript (ES6+)</li>
+								<li>Node.js</li>
+								<li>Typescript</li>
+							</ul>
+							<ul>
+								<li>Javascript (ES6+)</li>
+								<li>Node.js</li>
+								<li>Typescript</li>
+							</ul>
+						</div>
+					</div>
+					<div id="profile-pic" class="image-bg"></div>
+				</div>
+			</section>
+			<section id="experience">
+				<h1 class="section-title">Work Experiences</h1>
+				<div class="works">
+					<ul class="tabs">
+						<li class="item active" onclick="switchWorkTabTo(0)">Traveloka</li>
+						<li class="item" onclick="switchWorkTabTo(1)">SRW&Co.</li>
+					</ul>
+					<ul class="detail">
+						<li class="item active">
+							<h3>Backend Engineer Intern <span class="accent">@ <a href="https://traveloka.com" target="_blank">Traveloka</a></span></h3>
+							<p><small>February - July 2022</small></p>
+							<ul>
+								<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui magni consequuntur veniam aliquam sunt, itaque distinctio cupiditate quos, blanditiis voluptas quasi molestiae sequi amet eaque harum mollitia corporis, minima fugit!</li>
+								<li>asd</li>
+							</ul>
+						</li>
+						<li class="item">
+							<h3>Backend Engineer Intern <span class="accent">@ <a href="https://traveloka.com" target="_blank">Traveloka</a></span></h3>
+							<p><small>February - July 2022</small></p>
+							<ul>
+								<li>asd</li>
+								<li>asd</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="project">
+				<h1 class="section-title">Somethings I've Built</h1>
+				<ul class="list">
+					<li class="item">
+						<div class="featured-img image-bg" onclick="goto('vooka')" style="background-image: url('/assets/projects/vooka.png');"></div>
+						<div class="featured-detail">
+							<div class="accent">Featured Project</div>
+							<h2><a class="link" onclick="goto('vooka')">Vooka Bot</a></h2>
+							<p>An interactive music bot for discord with track controllers. Best 24/7 discord bot with bunch of useful features. Vooka comes with flexible queries system to find the perfect music, playlist, album, and lyrics.</p>
+							<ul class="tech-stack">
+								<li>Discord.js</li>
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>PostgreSQL</li>
+								<li>Redis</li>
+								<li>Web Scrape</li>
+							</ul>
+						</div>
+					</li>
+					<li class="item">
+						<div class="featured-img image-bg" onclick="goto('vooka')" style="background-image: url('/assets/projects/vooka.png');"></div>
+						<div class="featured-detail">
+							<div class="accent">Featured Project</div>
+							<h2><a class="link" onclick="goto('vooka')">Vooka Bot</a></h2>
+							<p>An interactive music bot for discord with track controllers. Best 24/7 discord bot with bunch of useful features. Vooka comes with flexible queries system to find the perfect music, playlist, album, and lyrics.</p>
+							<ul class="tech-stack">
+								<li>Discord.js</li>
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>PostgreSQL</li>
+								<li>Redis</li>
+								<li>Web Scrape</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="packages">
+				<h1 class="section-title">Open Source Projects</h1>
+				<ul class="list">
+					<li class="item">
+						<div class="header">
+							<h3>Songlyrics</h3>
+							<div class="icon-links">
+								<a class="link" onclick="goto('npm-songlyrics')">
+									<span class="iconify" data-icon="cib:npm" data-width="1.5em"></span>
+								</a>
+								<a class="link" onclick="goto('github-songlyrics')">
+									<span class="iconify" data-icon="charm:github" data-width="1.2em"></span>
+								</a>
+							</div>
+						</div>
+						<div class="body">
+							<p>A fastest Node.js package built with Typescript to search for perfect lyrics by simply entering the song title.</p>
+						</div>
+						<div class="footer">
+							<ul class="tech-stack">
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>Web Scrape</li>
+								<li>Duckduckgo</li>
+							</ul>
+						</div>
+					</li>
+					<li class="item">
+						<div class="header">
+							<h3>Songlyrics</h3>
+							<div class="icon-links">
+								<a class="link" onclick="goto('npm-songlyrics')">
+									<span class="iconify" data-icon="cib:npm" data-width="1.5em"></span>
+								</a>
+								<a class="link" onclick="goto('github-songlyrics')">
+									<span class="iconify" data-icon="charm:github" data-width="1.2em"></span>
+								</a>
+							</div>
+						</div>
+						<div class="body">
+							<p>A fastest Node.js package built with Typescript to search for perfect lyrics by simply entering the song title.</p>
+						</div>
+						<div class="footer">
+							<ul class="tech-stack">
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>Web Scrape</li>
+								<li>Duckduckgo</li>
+							</ul>
+						</div>
+					</li>
+					<li class="item">
+						<div class="header">
+							<h3>Songlyrics</h3>
+							<div class="icon-links">
+								<a class="link" onclick="goto('npm-songlyrics')">
+									<span class="iconify" data-icon="cib:npm" data-width="1.5em"></span>
+								</a>
+								<a class="link" onclick="goto('github-songlyrics')">
+									<span class="iconify" data-icon="charm:github" data-width="1.2em"></span>
+								</a>
+							</div>
+						</div>
+						<div class="body">
+							<p>A fastest Node.js package built with Typescript to search for perfect lyrics by simply entering the song title.</p>
+						</div>
+						<div class="footer">
+							<ul class="tech-stack">
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>Web Scrape</li>
+								<li>Duckduckgo</li>
+							</ul>
+						</div>
+					</li>
+					<li class="item">
+						<div class="header">
+							<h3>Songlyrics</h3>
+							<div class="icon-links">
+								<a class="link" onclick="goto('npm-songlyrics')">
+									<span class="iconify" data-icon="cib:npm" data-width="1.5em"></span>
+								</a>
+								<a class="link" onclick="goto('github-songlyrics')">
+									<span class="iconify" data-icon="charm:github" data-width="1.2em"></span>
+								</a>
+							</div>
+						</div>
+						<div class="body">
+							<p>A fastest Node.js package built with Typescript to search for perfect lyrics by simply entering the song title.</p>
+						</div>
+						<div class="footer">
+							<ul class="tech-stack">
+								<li>Node.js</li>
+								<li>Typescript</li>
+								<li>Jest</li>
+								<li>Web Scrape</li>
+								<li>Duckduckgo</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="contact">
+				<h1 class="section-title">Get In Touch</h1>
+				<p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+				<a class="link button" onclick="goto('email')">Send email</a>
+			</section>
+		</main>
+		<footer id="footer">
+			<div class="links">
+				<div><a class="link" onclick="goto('github-mr687')">
+					<span class="iconify" data-icon="charm:github" data-width="1.5em"></span>
+				</a></div>
+				<div><a class="link" onclick="goto('linkedin')">
+					<span class="iconify" data-icon="akar-icons:linkedin-fill" data-width="1.5em"></span>
+				</a></div>
+				<div><a class="link" onclick="goto('youtube')">
+					<span class="iconify" data-icon="ant-design:youtube-outlined" data-width="1.9em"></span>
+				</a></div>
+				<div><a class="link" onclick="goto('codewars')">
+					<span class="iconify" data-icon="cib:codewars" data-width="1.4em"></span>
+				</a></div>
+				<div><a class="link" onclick="goto('npm')">
+					<span class="iconify" data-icon="cib:npm" data-width="2.4em"></span>
+				</a></div>
+			</div>
+			<div>
+				<a class="link" onclick="goto('github-web')">Designed & built by <span class="highlight">mr687</span>.</a>
+			</div>
+		</footer>
+	</div>
 	
-	<script src="./assets/index.js"></script>
+	<script src="/assets/index.js"></script>
 </body>
 </html>
