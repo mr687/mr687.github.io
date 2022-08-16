@@ -3,7 +3,7 @@ const goto = (name) => {
 
 	const links = {
 		email: { type: 'external', url:'mailto:dapino.dev@gmail.com' },
-		resume: { type: 'external', url: '' },
+		resume: { type: 'external', url: 'https://github.com/mr687/mr687.github.io/raw/master/assets/doc/Resume-Davi%20Nomoeh%20Dani.docx.pdf' },
 		vooka: { type: 'external', url: 'https://vookav2.github.io' },
 		codewars: { type: 'external', url: 'https://www.codewars.com/users/mr687' },
 		npm: { type: 'external', url: 'https://www.npmjs.com/~mr687' },
