@@ -66,7 +66,7 @@ const closeSidebar = () => {
 
 const appRoot = document.getElementById('app');
 
-const handleOnLoaded = () => {
+const handleOnLoaded = async () => {
 	const linkHtmls = document.querySelectorAll('a.link');
 	linkHtmls.forEach(link => {
 		link.setAttribute('href', 'javascript:void(0);');
