@@ -151,7 +151,11 @@ section > .section-title::after {
 }
 
 .tech-stack {
+	padding: 0 !important;
+	list-style: none !important;
 	font-family: var(--font-mono);
+	column-gap: 1.3rem !important;
+	font-size: smaller;
 }
 .tech-stack,
 .icon-links {
@@ -342,6 +346,7 @@ section > .section-title::after {
 	grid-column: 1 / 8;
 }
 #project > .list > .item .featured-img {
+	cursor: pointer;
 	position: relative;
 	box-shadow: var(--box-shadow);
 	grid-area: 1 / 6 / -1 / -1;
