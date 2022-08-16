@@ -190,6 +190,18 @@ section > .section-title::after {
 }
 /* END APP */
 
+#fixed-links {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	gap: .9rem;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 20px;
+	z-index: 1;
+}
+
 /* HEADER */
 #header {
 	padding: 1.6rem 0;
@@ -558,6 +570,9 @@ section > .section-title::after {
 		--app-padding: 120px;
 		--section-padding: 8rem 0;
 		--section-title-gap: 4.4rem;
+	}
+	#fixed-links {
+		display: flex;
 	}
 }
 
