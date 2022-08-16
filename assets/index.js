@@ -13,6 +13,15 @@ const goto = (name) => {
 		'github-web': { type: 'external', url: 'https://github.com/mr687/mr687.github.io' },
 		'github-songlyrics': { type: 'external', url: 'https://github.com/vookav2/songlyrics' },
 		'npm-songlyrics': { type: 'external', url: 'https://www.npmjs.com/package/songlyrics' },
+		'npm-searchmusic': { type: 'external', url: 'https://www.npmjs.com/package/@vookav2/searchmusic' },
+		'github-searchmusic': { type: 'external', url: 'https://github.com/vookav2/searchmusic' },
+		'github-shortener': { type: 'external', url: 'https://github.com/mr687/URLs-Shortener' },
+		'github-voohook': { type: 'external', url: 'https://github.com/mr687/URLs-voohook' },
+		voohook: { type: 'external', url: 'http://voohook.herokuapp.com/' },
+		'npm-idcloudhost': { type: 'external', url: 'https://www.npmjs.com/package/idcloudhost-node-client' },
+		'github-idcloudhost': { type: 'external', url: 'https://github.com/mr687/idcloudhost-node-client' },
+		'npm-geoip': { type: 'external', url: 'https://www.npmjs.com/package/@mr687/reqeust-info' },
+		'github-geoip': { type: 'external', url: 'https://github.com/mr687/request-info' },
 	}
 
 	const link = links[name];
