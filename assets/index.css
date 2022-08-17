@@ -360,6 +360,9 @@ section > .section-title::after {
 #project > .list > .item:nth-child(odd) .featured-detail .tech-stack {
 	justify-content: end;
 }
+#project > .list > .item:nth-child(odd) .featured-detail div:nth-child(1) {
+	line-height: 10px;
+}
 #project > .list > .item:nth-child(odd) .featured-detail {
 	grid-column: 7 / -1;
 	text-align: right;
@@ -368,10 +371,22 @@ section > .section-title::after {
 	grid-column: 1 / 8;
 }
 #project > .list > .item .featured-img {
+	min-height: 370px;
 	cursor: pointer;
 	position: relative;
 	box-shadow: var(--box-shadow);
 	grid-area: 1 / 6 / -1 / -1;
+}
+#project > .list > .item .featured-detail .links a {
+	display: block;
+}
+#project > .list > .item:nth-child(odd) .featured-detail .links {
+	justify-content: end;
+}
+#project > .list > .item .featured-detail .links {
+	margin-top: 25px;
+	display: flex;
+	gap: 20px;
 }
 #project > .list > .item .featured-detail {
 	position: relative;
@@ -383,6 +398,11 @@ section > .section-title::after {
 	padding: var(--list-item-padding);
 	margin: 25px 0;
 	box-shadow: var(--box-shadow-light);
+	transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+#project .featured-detail p:hover {
+	transform: translateY(-10px);
+	box-shadow: var(--box-shadow);
 }
 #project .featured-img::after {
 	content: '';
@@ -548,6 +568,9 @@ section > .section-title::after {
 
 	#project > .list {
 		gap: var(--list-item-gap);
+	}
+	#project > .list > .item .featured-detail .links {
+		display: none;
 	}
 	#project > .list > .item:nth-child(odd) .featured-detail {
 		text-align: left;
