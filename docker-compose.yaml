@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: mr687_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: "always"
+    ports:
+      - 8000:80
